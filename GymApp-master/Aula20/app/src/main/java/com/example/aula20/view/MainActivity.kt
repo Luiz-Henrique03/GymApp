@@ -3,7 +3,6 @@ package com.example.aula20.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.aula20.R
 import com.example.aula20.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,8 +15,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnCadastrar.setOnClickListener {
-            startActivity(Intent(this, CadastroActivity::class.java))
+        binding.btnCadastrarProfessor.setOnClickListener {
+            startActivity(Intent(this, CadastroProfessorActivity::class.java))
         }
 
         binding.btnLogin.setOnClickListener {

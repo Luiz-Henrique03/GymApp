@@ -1,0 +1,14 @@
+package com.example.aula20.model
+
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "exericios")
+data class Exercicios (
+    @ColumnInfo @PrimaryKey(autoGenerate = true) var id: Int,
+    @ColumnInfo var id_aluno: Int,
+    @ColumnInfo var nome: String,
+    @ColumnInfo var Series: String,
+    @ColumnInfo var Dias_da_semana: String
+)

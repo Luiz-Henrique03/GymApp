@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnEntrar.setOnClickListener {
+        binding.btnArrumeSe.setOnClickListener {
             val nome = binding.edtNome.text.toString()
             val senha = binding.edtSenha.text.toString()
 
