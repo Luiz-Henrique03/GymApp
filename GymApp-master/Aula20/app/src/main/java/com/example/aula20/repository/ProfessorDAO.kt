@@ -24,4 +24,7 @@ interface ProfessorDAO {
 
     @Query("SELECT * FROM professores")
     fun getProfessores() : List<Professor>
+
+    @Query("SELECT * FROM professores WHERE nome = :nome")
+    fun getProfessorPorNome(nome: String): Professor?
 }

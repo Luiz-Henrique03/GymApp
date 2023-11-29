@@ -32,7 +32,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
     this.__insertionAdapterOfUsuario = new EntityInsertionAdapter<Usuario>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `usuario` (`id`,`nome`,`Email`,`Senha`) VALUES (nullif(?, 0),?,?,?)";
+        return "INSERT OR ABORT INTO `usuarios` (`id`,`nome`,`Email`,`Senha`,`id_professor`) VALUES (nullif(?, 0),?,?,?,?)";
       }
 
       @Override
@@ -53,12 +53,13 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
         } else {
           stmt.bindString(4, value.getSenha());
         }
+        stmt.bindLong(5, value.getId_professor());
       }
     };
     this.__deletionAdapterOfUsuario = new EntityDeletionOrUpdateAdapter<Usuario>(__db) {
       @Override
       public String createQuery() {
-        return "DELETE FROM `usuario` WHERE `id` = ?";
+        return "DELETE FROM `usuarios` WHERE `id` = ?";
       }
 
       @Override
@@ -69,7 +70,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
     this.__updateAdapterOfUsuario = new EntityDeletionOrUpdateAdapter<Usuario>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `usuario` SET `id` = ?,`nome` = ?,`Email` = ?,`Senha` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `usuarios` SET `id` = ?,`nome` = ?,`Email` = ?,`Senha` = ?,`id_professor` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -90,7 +91,8 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
         } else {
           stmt.bindString(4, value.getSenha());
         }
-        stmt.bindLong(5, value.getId());
+        stmt.bindLong(5, value.getId_professor());
+        stmt.bindLong(6, value.getId());
       }
     };
   }
@@ -134,7 +136,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
 
   @Override
   public Usuario getUsuario(final int id) {
-    final String _sql = "SELECT * FROM usuario WHERE id = ?";
+    final String _sql = "SELECT * FROM usuarios WHERE id = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     _statement.bindLong(_argIndex, id);
@@ -145,6 +147,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
       final int _cursorIndexOfNome = CursorUtil.getColumnIndexOrThrow(_cursor, "nome");
       final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "Email");
       final int _cursorIndexOfSenha = CursorUtil.getColumnIndexOrThrow(_cursor, "Senha");
+      final int _cursorIndexOfIdProfessor = CursorUtil.getColumnIndexOrThrow(_cursor, "id_professor");
       final Usuario _result;
       if(_cursor.moveToFirst()) {
         final int _tmpId;
@@ -167,7 +170,9 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
         } else {
           _tmpSenha = _cursor.getString(_cursorIndexOfSenha);
         }
-        _result = new Usuario(_tmpId,_tmpNome,_tmpEmail,_tmpSenha);
+        final int _tmpId_professor;
+        _tmpId_professor = _cursor.getInt(_cursorIndexOfIdProfessor);
+        _result = new Usuario(_tmpId,_tmpNome,_tmpEmail,_tmpSenha,_tmpId_professor);
       } else {
         _result = null;
       }
@@ -180,7 +185,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
 
   @Override
   public List<Usuario> getUsuarios() {
-    final String _sql = "SELECT * FROM usuario";
+    final String _sql = "SELECT * FROM usuarios";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     __db.assertNotSuspendingTransaction();
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
@@ -189,6 +194,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
       final int _cursorIndexOfNome = CursorUtil.getColumnIndexOrThrow(_cursor, "nome");
       final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "Email");
       final int _cursorIndexOfSenha = CursorUtil.getColumnIndexOrThrow(_cursor, "Senha");
+      final int _cursorIndexOfIdProfessor = CursorUtil.getColumnIndexOrThrow(_cursor, "id_professor");
       final List<Usuario> _result = new ArrayList<Usuario>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Usuario _item;
@@ -212,7 +218,9 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
         } else {
           _tmpSenha = _cursor.getString(_cursorIndexOfSenha);
         }
-        _item = new Usuario(_tmpId,_tmpNome,_tmpEmail,_tmpSenha);
+        final int _tmpId_professor;
+        _tmpId_professor = _cursor.getInt(_cursorIndexOfIdProfessor);
+        _item = new Usuario(_tmpId,_tmpNome,_tmpEmail,_tmpSenha,_tmpId_professor);
         _result.add(_item);
       }
       return _result;
@@ -224,7 +232,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
 
   @Override
   public Usuario getUsuarioPorNome(final String nome) {
-    final String _sql = "SELECT * FROM usuario WHERE nome = ?";
+    final String _sql = "SELECT * FROM usuarios WHERE nome = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (nome == null) {
@@ -239,6 +247,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
       final int _cursorIndexOfNome = CursorUtil.getColumnIndexOrThrow(_cursor, "nome");
       final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "Email");
       final int _cursorIndexOfSenha = CursorUtil.getColumnIndexOrThrow(_cursor, "Senha");
+      final int _cursorIndexOfIdProfessor = CursorUtil.getColumnIndexOrThrow(_cursor, "id_professor");
       final Usuario _result;
       if(_cursor.moveToFirst()) {
         final int _tmpId;
@@ -261,7 +270,9 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
         } else {
           _tmpSenha = _cursor.getString(_cursorIndexOfSenha);
         }
-        _result = new Usuario(_tmpId,_tmpNome,_tmpEmail,_tmpSenha);
+        final int _tmpId_professor;
+        _tmpId_professor = _cursor.getInt(_cursorIndexOfIdProfessor);
+        _result = new Usuario(_tmpId,_tmpNome,_tmpEmail,_tmpSenha,_tmpId_professor);
       } else {
         _result = null;
       }

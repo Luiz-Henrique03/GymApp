@@ -25,7 +25,5 @@ interface UsuarioDAO {
     @Query("SELECT * FROM usuarios WHERE nome = :nome")
     fun getUsuarioPorNome(nome: String): Usuario?
 
-    @Query("SELECT * FROM professores WHERE nome = :nome")
-    fun getProfessorPorNome(nome: String): Professor?
 
 }

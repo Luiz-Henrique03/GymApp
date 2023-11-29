@@ -5,12 +5,12 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.aula20.databinding.ActivityCadastroBinding
-import com.example.aula20.viewmodel.CadastroViewModel
+import com.example.aula20.viewmodel.CadastroProfessorViewModel
 
 class CadastroProfessorActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCadastroBinding
-    private lateinit var cadastroViewModel: CadastroViewModel
+    private lateinit var cadastroProfessorViewModel: CadastroProfessorViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,7 @@ class CadastroProfessorActivity : AppCompatActivity() {
         binding = ActivityCadastroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        cadastroViewModel = ViewModelProvider(this).get(CadastroViewModel::class.java)
+        cadastroProfessorViewModel = ViewModelProvider(this).get(CadastroProfessorViewModel::class.java)
         setObserver()
 
         // ação de clique do botão
@@ -30,7 +30,7 @@ class CadastroProfessorActivity : AppCompatActivity() {
 
             // tentaremos salvar a tarefa no BD. Caso positivo, esta
             // activity será finalizada
-            if (cadastroViewModel.salvar(nome,email,senha)){
+            if (cadastroProfessorViewModel.salvar(nome,email,senha)){
                 finish()
             }
 
@@ -40,7 +40,7 @@ class CadastroProfessorActivity : AppCompatActivity() {
     }
 
     fun setObserver(){
-        cadastroViewModel.getTxtToast().observe(this){
+        cadastroProfessorViewModel.getTxtToast().observe(this){
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
         }
     }

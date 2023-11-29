@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.ExerciciosActivity">
+
+    <!-- RadioGroup para exercícios -->
+    <RadioGroup
+        android:id="@+id/exerciseRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- RadioButton para cada exercício -->
+        <RadioButton
+            android:id="@+id/exercise1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Supino reto"/>
+
+        <RadioButton
+            android:id="@+id/exercise2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Supino declinado"/>
+
+        <RadioButton
+            android:id="@+id/exercise3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rosca alternado"/>
+
+        <RadioButton
+            android:id="@+id/exercise4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flexão"/>
+
+        <RadioButton
+            android:id="@+id/exercise5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remada"/>
+
+        <RadioButton
+            android:id="@+id/exercise6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remada polia baixa"/>
+
+        <RadioButton
+            android:id="@+id/exercise7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Esteira"/>
+
+        <RadioButton
+            android:id="@+id/exercise8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Francês"/>
+
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastar"
+        android:layout_marginLeft="150dp"/>
+</LinearLayout>

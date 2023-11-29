@@ -19,15 +19,15 @@ public abstract interface UsuarioDAO {
     com.example.aula20.model.Usuario usuario);
     
     @org.jetbrains.annotations.NotNull
-    @androidx.room.Query(value = "SELECT * FROM usuario WHERE id = :id")
+    @androidx.room.Query(value = "SELECT * FROM usuarios WHERE id = :id")
     public abstract com.example.aula20.model.Usuario getUsuario(int id);
     
     @org.jetbrains.annotations.NotNull
-    @androidx.room.Query(value = "SELECT * FROM usuario")
+    @androidx.room.Query(value = "SELECT * FROM usuarios")
     public abstract java.util.List<com.example.aula20.model.Usuario> getUsuarios();
     
     @org.jetbrains.annotations.Nullable
-    @androidx.room.Query(value = "SELECT * FROM usuario WHERE nome = :nome")
+    @androidx.room.Query(value = "SELECT * FROM usuarios WHERE nome = :nome")
     public abstract com.example.aula20.model.Usuario getUsuarioPorNome(@org.jetbrains.annotations.NotNull
     java.lang.String nome);
 }

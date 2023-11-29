@@ -3195,6 +3195,15 @@ int id end 0x7f0800b5
 int id endToStart 0x7f0800b6
 int id enterAlways 0x7f0800b7
 int id enterAlwaysCollapsed 0x7f0800b8
+int id exercise1 0x7f0801f8
+int id exercise2 0x7f0801f9
+int id exercise3 0x7f0801fa
+int id exercise4 0x7f0801fb
+int id exercise5 0x7f0801fc
+int id exercise6 0x7f0801fd
+int id exercise7 0x7f0801fe
+int id exercise8 0x7f0801ff
+int id exerciseRadioGroup 0x7f080200
 int id exitUntilCollapsed 0x7f0800b9
 int id expand_activities_button 0x7f0800ba
 int id expanded_menu 0x7f0800bb
@@ -3628,8 +3637,10 @@ int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_cadastro 0x7f0b001c
 int layout activity_cadastro_prof 0x7f0b006c
+int layout activity_exercicios 0x7f0b006d
 int layout activity_login 0x7f0b001d
 int layout activity_main 0x7f0b001e
+int layout activity_professor 0x7f0b006e
 int layout custom_dialog 0x7f0b001f
 int layout design_bottom_navigation_item 0x7f0b0020
 int layout design_bottom_sheet_dialog 0x7f0b0021

@@ -3196,6 +3196,15 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id exercise1
+id exercise2
+id exercise3
+id exercise4
+id exercise5
+id exercise6
+id exercise7
+id exercise8
+id exerciseRadioGroup
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3629,8 +3638,10 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_cadastro
 layout activity_cadastro_prof
+layout activity_exercicios
 layout activity_login
 layout activity_main
+layout activity_professor
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

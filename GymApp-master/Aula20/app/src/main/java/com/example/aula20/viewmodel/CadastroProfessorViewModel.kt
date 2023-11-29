@@ -5,12 +5,10 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.aula20.model.Professor
-import com.example.aula20.model.Usuario
 import com.example.aula20.model.ValidarUsuario
 import com.example.aula20.repository.ProfessorRepository
-import com.example.aula20.repository.UsuarioRepository
 
-class CadastroViewModel(application: Application) : AndroidViewModel(application) {
+class CadastroProfessorViewModel(application: Application) : AndroidViewModel(application) {
 
     private var txtToast = MutableLiveData<String>()
     private var validarUsuario = ValidarUsuario()

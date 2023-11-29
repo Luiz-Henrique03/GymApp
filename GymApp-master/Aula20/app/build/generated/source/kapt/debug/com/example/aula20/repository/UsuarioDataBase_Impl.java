@@ -37,14 +37,14 @@ public final class UsuarioDataBase_Impl extends UsuarioDataBase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `usuario` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `Email` TEXT NOT NULL, `Senha` TEXT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `usuarios` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nome` TEXT NOT NULL, `Email` TEXT NOT NULL, `Senha` TEXT NOT NULL, `id_professor` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1e8148a9dfc4ab88c2b8604ab52bd197')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5507186847529f5cf86182fd25f7ebd7')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("DROP TABLE IF EXISTS `usuario`");
+        _db.execSQL("DROP TABLE IF EXISTS `usuarios`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -83,23 +83,24 @@ public final class UsuarioDataBase_Impl extends UsuarioDataBase {
 
       @Override
       public RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsUsuario = new HashMap<String, TableInfo.Column>(4);
-        _columnsUsuario.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsUsuario.put("nome", new TableInfo.Column("nome", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsUsuario.put("Email", new TableInfo.Column("Email", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsUsuario.put("Senha", new TableInfo.Column("Senha", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysUsuario = new HashSet<TableInfo.ForeignKey>(0);
-        final HashSet<TableInfo.Index> _indicesUsuario = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoUsuario = new TableInfo("usuario", _columnsUsuario, _foreignKeysUsuario, _indicesUsuario);
-        final TableInfo _existingUsuario = TableInfo.read(_db, "usuario");
-        if (! _infoUsuario.equals(_existingUsuario)) {
-          return new RoomOpenHelper.ValidationResult(false, "usuario(com.example.aula20.model.Usuario).\n"
-                  + " Expected:\n" + _infoUsuario + "\n"
-                  + " Found:\n" + _existingUsuario);
+        final HashMap<String, TableInfo.Column> _columnsUsuarios = new HashMap<String, TableInfo.Column>(5);
+        _columnsUsuarios.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUsuarios.put("nome", new TableInfo.Column("nome", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUsuarios.put("Email", new TableInfo.Column("Email", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUsuarios.put("Senha", new TableInfo.Column("Senha", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsUsuarios.put("id_professor", new TableInfo.Column("id_professor", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysUsuarios = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesUsuarios = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoUsuarios = new TableInfo("usuarios", _columnsUsuarios, _foreignKeysUsuarios, _indicesUsuarios);
+        final TableInfo _existingUsuarios = TableInfo.read(_db, "usuarios");
+        if (! _infoUsuarios.equals(_existingUsuarios)) {
+          return new RoomOpenHelper.ValidationResult(false, "usuarios(com.example.aula20.model.Usuario).\n"
+                  + " Expected:\n" + _infoUsuarios + "\n"
+                  + " Found:\n" + _existingUsuarios);
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "1e8148a9dfc4ab88c2b8604ab52bd197", "145d793f4f91111a9a3186e6ccbdd584");
+    }, "5507186847529f5cf86182fd25f7ebd7", "36342b74ed33d74e74fb70ec8b447649");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -112,7 +113,7 @@ public final class UsuarioDataBase_Impl extends UsuarioDataBase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "usuario");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "usuarios");
   }
 
   @Override
@@ -121,7 +122,7 @@ public final class UsuarioDataBase_Impl extends UsuarioDataBase {
     final SupportSQLiteDatabase _db = super.getOpenHelper().getWritableDatabase();
     try {
       super.beginTransaction();
-      _db.execSQL("DELETE FROM `usuario`");
+      _db.execSQL("DELETE FROM `usuarios`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();

@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import com.example.aula20.R
 import com.example.aula20.databinding.ActivityLoginBinding
+import com.example.aula20.repository.ProfessorDAO
+import com.example.aula20.repository.ProfessorDatabase
 import com.example.aula20.repository.UsuarioDAO
 import com.example.aula20.repository.UsuarioDataBase
 
@@ -12,11 +14,13 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var usuarioDAO: UsuarioDAO
+    private lateinit var professorDAO: ProfessorDAO
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         usuarioDAO = UsuarioDataBase.getInstance(this).getDao()
+        professorDAO = ProfessorDatabase.getInstance(this).getDao()
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -25,8 +29,9 @@ class LoginActivity : AppCompatActivity() {
             val senha = binding.edtSenha.text.toString()
 
             val usuario = usuarioDAO.getUsuarioPorNome(nome)
+            val professor = professorDAO.getProfessorPorNome(nome)
 
-            if (usuario != null && senha == usuario.Senha) {
+            if (professor != null && senha == professor.Senha || usuario != null && senha == usuario.Senha) {
 
                 Log.d("LoginActivity", "Usuário logado - Nome: $nome, Senha: $senha")
             } else {

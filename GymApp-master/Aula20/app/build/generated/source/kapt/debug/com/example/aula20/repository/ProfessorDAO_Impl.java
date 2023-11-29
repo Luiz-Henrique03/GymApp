@@ -222,6 +222,56 @@ public final class ProfessorDAO_Impl implements ProfessorDAO {
     }
   }
 
+  @Override
+  public Professor getProfessorPorNome(final String nome) {
+    final String _sql = "SELECT * FROM professores WHERE nome = ?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (nome == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, nome);
+    }
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+      final int _cursorIndexOfNome = CursorUtil.getColumnIndexOrThrow(_cursor, "nome");
+      final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "Email");
+      final int _cursorIndexOfSenha = CursorUtil.getColumnIndexOrThrow(_cursor, "Senha");
+      final Professor _result;
+      if(_cursor.moveToFirst()) {
+        final int _tmpId;
+        _tmpId = _cursor.getInt(_cursorIndexOfId);
+        final String _tmpNome;
+        if (_cursor.isNull(_cursorIndexOfNome)) {
+          _tmpNome = null;
+        } else {
+          _tmpNome = _cursor.getString(_cursorIndexOfNome);
+        }
+        final String _tmpEmail;
+        if (_cursor.isNull(_cursorIndexOfEmail)) {
+          _tmpEmail = null;
+        } else {
+          _tmpEmail = _cursor.getString(_cursorIndexOfEmail);
+        }
+        final String _tmpSenha;
+        if (_cursor.isNull(_cursorIndexOfSenha)) {
+          _tmpSenha = null;
+        } else {
+          _tmpSenha = _cursor.getString(_cursorIndexOfSenha);
+        }
+        _result = new Professor(_tmpId,_tmpNome,_tmpEmail,_tmpSenha);
+      } else {
+        _result = null;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
   public static List<Class<?>> getRequiredConverters() {
     return Collections.emptyList();
   }
