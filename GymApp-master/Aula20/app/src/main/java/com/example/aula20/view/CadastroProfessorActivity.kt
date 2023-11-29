@@ -4,18 +4,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.aula20.databinding.ActivityCadastroBinding
+import com.example.aula20.databinding.ActivityCadastroProfBinding
 import com.example.aula20.viewmodel.CadastroProfessorViewModel
 
 class CadastroProfessorActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityCadastroBinding
+    private lateinit var binding: ActivityCadastroProfBinding
     private lateinit var cadastroProfessorViewModel: CadastroProfessorViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityCadastroBinding.inflate(layoutInflater)
+        binding = ActivityCadastroProfBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         cadastroProfessorViewModel = ViewModelProvider(this).get(CadastroProfessorViewModel::class.java)

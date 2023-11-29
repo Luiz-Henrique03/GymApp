@@ -49,6 +49,13 @@
         android:text="Login"
         android:layout_marginBottom="15dp"/>
 
+    <Button
+        android:id="@+id/btnLoginUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="Login Usuario"
+        android:layout_marginBottom="15dp"/>
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="397dp"

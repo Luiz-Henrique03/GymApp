@@ -16,14 +16,13 @@ interface UsuarioDAO {
     @Update
     fun atualizar (usuario: Usuario)
 
-    @Query("SELECT * FROM usuarios WHERE id = :id")
+    @Query("SELECT * FROM usuarios1 WHERE id = :id")
     fun getUsuario(id: Int) : Usuario
 
-    @Query("SELECT * FROM usuarios")
+    @Query("SELECT * FROM usuarios1")
     fun getUsuarios() : List<Usuario>
 
-    @Query("SELECT * FROM usuarios WHERE nome = :nome")
+    @Query("SELECT * FROM usuarios1 WHERE nome = :nome")
     fun getUsuarioPorNome(nome: String): Usuario?
-
 
 }

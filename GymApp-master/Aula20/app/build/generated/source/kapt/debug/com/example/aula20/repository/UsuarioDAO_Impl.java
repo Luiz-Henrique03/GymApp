@@ -32,7 +32,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
     this.__insertionAdapterOfUsuario = new EntityInsertionAdapter<Usuario>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `usuarios` (`id`,`nome`,`Email`,`Senha`,`id_professor`) VALUES (nullif(?, 0),?,?,?,?)";
+        return "INSERT OR ABORT INTO `usuarios1` (`id`,`nome`,`Email`,`Senha`,`professor`) VALUES (nullif(?, 0),?,?,?,?)";
       }
 
       @Override
@@ -53,13 +53,17 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
         } else {
           stmt.bindString(4, value.getSenha());
         }
-        stmt.bindLong(5, value.getId_professor());
+        if (value.getProfessor() == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.getProfessor());
+        }
       }
     };
     this.__deletionAdapterOfUsuario = new EntityDeletionOrUpdateAdapter<Usuario>(__db) {
       @Override
       public String createQuery() {
-        return "DELETE FROM `usuarios` WHERE `id` = ?";
+        return "DELETE FROM `usuarios1` WHERE `id` = ?";
       }
 
       @Override
@@ -70,7 +74,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
     this.__updateAdapterOfUsuario = new EntityDeletionOrUpdateAdapter<Usuario>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `usuarios` SET `id` = ?,`nome` = ?,`Email` = ?,`Senha` = ?,`id_professor` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `usuarios1` SET `id` = ?,`nome` = ?,`Email` = ?,`Senha` = ?,`professor` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -91,7 +95,11 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
         } else {
           stmt.bindString(4, value.getSenha());
         }
-        stmt.bindLong(5, value.getId_professor());
+        if (value.getProfessor() == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.getProfessor());
+        }
         stmt.bindLong(6, value.getId());
       }
     };
@@ -136,7 +144,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
 
   @Override
   public Usuario getUsuario(final int id) {
-    final String _sql = "SELECT * FROM usuarios WHERE id = ?";
+    final String _sql = "SELECT * FROM usuarios1 WHERE id = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     _statement.bindLong(_argIndex, id);
@@ -147,7 +155,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
       final int _cursorIndexOfNome = CursorUtil.getColumnIndexOrThrow(_cursor, "nome");
       final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "Email");
       final int _cursorIndexOfSenha = CursorUtil.getColumnIndexOrThrow(_cursor, "Senha");
-      final int _cursorIndexOfIdProfessor = CursorUtil.getColumnIndexOrThrow(_cursor, "id_professor");
+      final int _cursorIndexOfProfessor = CursorUtil.getColumnIndexOrThrow(_cursor, "professor");
       final Usuario _result;
       if(_cursor.moveToFirst()) {
         final int _tmpId;
@@ -170,9 +178,13 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
         } else {
           _tmpSenha = _cursor.getString(_cursorIndexOfSenha);
         }
-        final int _tmpId_professor;
-        _tmpId_professor = _cursor.getInt(_cursorIndexOfIdProfessor);
-        _result = new Usuario(_tmpId,_tmpNome,_tmpEmail,_tmpSenha,_tmpId_professor);
+        final String _tmpProfessor;
+        if (_cursor.isNull(_cursorIndexOfProfessor)) {
+          _tmpProfessor = null;
+        } else {
+          _tmpProfessor = _cursor.getString(_cursorIndexOfProfessor);
+        }
+        _result = new Usuario(_tmpId,_tmpNome,_tmpEmail,_tmpSenha,_tmpProfessor);
       } else {
         _result = null;
       }
@@ -185,7 +197,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
 
   @Override
   public List<Usuario> getUsuarios() {
-    final String _sql = "SELECT * FROM usuarios";
+    final String _sql = "SELECT * FROM usuarios1";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     __db.assertNotSuspendingTransaction();
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
@@ -194,7 +206,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
       final int _cursorIndexOfNome = CursorUtil.getColumnIndexOrThrow(_cursor, "nome");
       final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "Email");
       final int _cursorIndexOfSenha = CursorUtil.getColumnIndexOrThrow(_cursor, "Senha");
-      final int _cursorIndexOfIdProfessor = CursorUtil.getColumnIndexOrThrow(_cursor, "id_professor");
+      final int _cursorIndexOfProfessor = CursorUtil.getColumnIndexOrThrow(_cursor, "professor");
       final List<Usuario> _result = new ArrayList<Usuario>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Usuario _item;
@@ -218,9 +230,13 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
         } else {
           _tmpSenha = _cursor.getString(_cursorIndexOfSenha);
         }
-        final int _tmpId_professor;
-        _tmpId_professor = _cursor.getInt(_cursorIndexOfIdProfessor);
-        _item = new Usuario(_tmpId,_tmpNome,_tmpEmail,_tmpSenha,_tmpId_professor);
+        final String _tmpProfessor;
+        if (_cursor.isNull(_cursorIndexOfProfessor)) {
+          _tmpProfessor = null;
+        } else {
+          _tmpProfessor = _cursor.getString(_cursorIndexOfProfessor);
+        }
+        _item = new Usuario(_tmpId,_tmpNome,_tmpEmail,_tmpSenha,_tmpProfessor);
         _result.add(_item);
       }
       return _result;
@@ -232,7 +248,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
 
   @Override
   public Usuario getUsuarioPorNome(final String nome) {
-    final String _sql = "SELECT * FROM usuarios WHERE nome = ?";
+    final String _sql = "SELECT * FROM usuarios1 WHERE nome = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (nome == null) {
@@ -247,7 +263,7 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
       final int _cursorIndexOfNome = CursorUtil.getColumnIndexOrThrow(_cursor, "nome");
       final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "Email");
       final int _cursorIndexOfSenha = CursorUtil.getColumnIndexOrThrow(_cursor, "Senha");
-      final int _cursorIndexOfIdProfessor = CursorUtil.getColumnIndexOrThrow(_cursor, "id_professor");
+      final int _cursorIndexOfProfessor = CursorUtil.getColumnIndexOrThrow(_cursor, "professor");
       final Usuario _result;
       if(_cursor.moveToFirst()) {
         final int _tmpId;
@@ -270,9 +286,13 @@ public final class UsuarioDAO_Impl implements UsuarioDAO {
         } else {
           _tmpSenha = _cursor.getString(_cursorIndexOfSenha);
         }
-        final int _tmpId_professor;
-        _tmpId_professor = _cursor.getInt(_cursorIndexOfIdProfessor);
-        _result = new Usuario(_tmpId,_tmpNome,_tmpEmail,_tmpSenha,_tmpId_professor);
+        final String _tmpProfessor;
+        if (_cursor.isNull(_cursorIndexOfProfessor)) {
+          _tmpProfessor = null;
+        } else {
+          _tmpProfessor = _cursor.getString(_cursorIndexOfProfessor);
+        }
+        _result = new Usuario(_tmpId,_tmpNome,_tmpEmail,_tmpSenha,_tmpProfessor);
       } else {
         _result = null;
       }

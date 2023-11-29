@@ -4,25 +4,46 @@ package com.example.aula20.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.aula20.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityCadastroProfBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
-  private ActivityCadastroProfBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final Button btnSalvar;
+
+  @NonNull
+  public final EditText edtEmail;
+
+  @NonNull
+  public final EditText edtNome;
+
+  @NonNull
+  public final EditText edtSenha;
+
+  private ActivityCadastroProfBinding(@NonNull LinearLayout rootView, @NonNull Button btnSalvar,
+      @NonNull EditText edtEmail, @NonNull EditText edtNome, @NonNull EditText edtSenha) {
     this.rootView = rootView;
+    this.btnSalvar = btnSalvar;
+    this.edtEmail = edtEmail;
+    this.edtNome = edtNome;
+    this.edtSenha = edtSenha;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +64,38 @@ public final class ActivityCadastroProfBinding implements ViewBinding {
 
   @NonNull
   public static ActivityCadastroProfBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnSalvar;
+      Button btnSalvar = ViewBindings.findChildViewById(rootView, id);
+      if (btnSalvar == null) {
+        break missingId;
+      }
 
-    return new ActivityCadastroProfBinding((ConstraintLayout) rootView);
+      id = R.id.edtEmail;
+      EditText edtEmail = ViewBindings.findChildViewById(rootView, id);
+      if (edtEmail == null) {
+        break missingId;
+      }
+
+      id = R.id.edtNome;
+      EditText edtNome = ViewBindings.findChildViewById(rootView, id);
+      if (edtNome == null) {
+        break missingId;
+      }
+
+      id = R.id.edtSenha;
+      EditText edtSenha = ViewBindings.findChildViewById(rootView, id);
+      if (edtSenha == null) {
+        break missingId;
+      }
+
+      return new ActivityCadastroProfBinding((LinearLayout) rootView, btnSalvar, edtEmail, edtNome,
+          edtSenha);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

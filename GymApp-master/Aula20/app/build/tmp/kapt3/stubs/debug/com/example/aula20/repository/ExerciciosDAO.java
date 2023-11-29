@@ -19,10 +19,10 @@ public abstract interface ExerciciosDAO {
     com.example.aula20.model.Exercicios exercicios);
     
     @org.jetbrains.annotations.NotNull
-    @androidx.room.Query(value = "SELECT * FROM exericios WHERE id = :id")
+    @androidx.room.Query(value = "SELECT * FROM exercicios WHERE id = :id")
     public abstract com.example.aula20.model.Exercicios getExercicio(int id);
     
     @org.jetbrains.annotations.NotNull
-    @androidx.room.Query(value = "SELECT * FROM exericios")
+    @androidx.room.Query(value = "SELECT * FROM exercicios")
     public abstract java.util.List<com.example.aula20.model.Exercicios> getExercicios();
 }

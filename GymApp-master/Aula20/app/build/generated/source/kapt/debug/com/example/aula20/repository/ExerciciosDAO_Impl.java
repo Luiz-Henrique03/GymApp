@@ -32,7 +32,7 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
     this.__insertionAdapterOfExercicios = new EntityInsertionAdapter<Exercicios>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `exericios` (`id`,`id_aluno`,`nome`,`Series`,`Dias_da_semana`) VALUES (nullif(?, 0),?,?,?,?)";
+        return "INSERT OR ABORT INTO `exercicios` (`id`,`id_aluno`,`nome`,`Series`,`Dias_da_semana`) VALUES (nullif(?, 0),?,?,?,?)";
       }
 
       @Override
@@ -59,7 +59,7 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
     this.__deletionAdapterOfExercicios = new EntityDeletionOrUpdateAdapter<Exercicios>(__db) {
       @Override
       public String createQuery() {
-        return "DELETE FROM `exericios` WHERE `id` = ?";
+        return "DELETE FROM `exercicios` WHERE `id` = ?";
       }
 
       @Override
@@ -70,7 +70,7 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
     this.__updateAdapterOfExercicios = new EntityDeletionOrUpdateAdapter<Exercicios>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `exericios` SET `id` = ?,`id_aluno` = ?,`nome` = ?,`Series` = ?,`Dias_da_semana` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `exercicios` SET `id` = ?,`id_aluno` = ?,`nome` = ?,`Series` = ?,`Dias_da_semana` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -136,7 +136,7 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
 
   @Override
   public Exercicios getExercicio(final int id) {
-    final String _sql = "SELECT * FROM exericios WHERE id = ?";
+    final String _sql = "SELECT * FROM exercicios WHERE id = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     _statement.bindLong(_argIndex, id);
@@ -185,7 +185,7 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
 
   @Override
   public List<Exercicios> getExercicios() {
-    final String _sql = "SELECT * FROM exericios";
+    final String _sql = "SELECT * FROM exercicios";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     __db.assertNotSuspendingTransaction();
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);

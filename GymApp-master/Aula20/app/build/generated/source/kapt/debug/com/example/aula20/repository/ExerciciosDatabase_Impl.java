@@ -37,14 +37,14 @@ public final class ExerciciosDatabase_Impl extends ExerciciosDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `exericios` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_aluno` INTEGER NOT NULL, `nome` TEXT NOT NULL, `Series` TEXT NOT NULL, `Dias_da_semana` TEXT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `exercicios` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_aluno` INTEGER NOT NULL, `nome` TEXT NOT NULL, `Series` TEXT NOT NULL, `Dias_da_semana` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8163a68aa313fccdb7ef0347ce4ea7ca')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7030afe46543fd55a574b5bc51e45beb')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("DROP TABLE IF EXISTS `exericios`");
+        _db.execSQL("DROP TABLE IF EXISTS `exercicios`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -83,24 +83,24 @@ public final class ExerciciosDatabase_Impl extends ExerciciosDatabase {
 
       @Override
       public RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsExericios = new HashMap<String, TableInfo.Column>(5);
-        _columnsExericios.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsExericios.put("id_aluno", new TableInfo.Column("id_aluno", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsExericios.put("nome", new TableInfo.Column("nome", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsExericios.put("Series", new TableInfo.Column("Series", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsExericios.put("Dias_da_semana", new TableInfo.Column("Dias_da_semana", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysExericios = new HashSet<TableInfo.ForeignKey>(0);
-        final HashSet<TableInfo.Index> _indicesExericios = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoExericios = new TableInfo("exericios", _columnsExericios, _foreignKeysExericios, _indicesExericios);
-        final TableInfo _existingExericios = TableInfo.read(_db, "exericios");
-        if (! _infoExericios.equals(_existingExericios)) {
-          return new RoomOpenHelper.ValidationResult(false, "exericios(com.example.aula20.model.Exercicios).\n"
-                  + " Expected:\n" + _infoExericios + "\n"
-                  + " Found:\n" + _existingExericios);
+        final HashMap<String, TableInfo.Column> _columnsExercicios = new HashMap<String, TableInfo.Column>(5);
+        _columnsExercicios.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsExercicios.put("id_aluno", new TableInfo.Column("id_aluno", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsExercicios.put("nome", new TableInfo.Column("nome", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsExercicios.put("Series", new TableInfo.Column("Series", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsExercicios.put("Dias_da_semana", new TableInfo.Column("Dias_da_semana", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysExercicios = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesExercicios = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoExercicios = new TableInfo("exercicios", _columnsExercicios, _foreignKeysExercicios, _indicesExercicios);
+        final TableInfo _existingExercicios = TableInfo.read(_db, "exercicios");
+        if (! _infoExercicios.equals(_existingExercicios)) {
+          return new RoomOpenHelper.ValidationResult(false, "exercicios(com.example.aula20.model.Exercicios).\n"
+                  + " Expected:\n" + _infoExercicios + "\n"
+                  + " Found:\n" + _existingExercicios);
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "8163a68aa313fccdb7ef0347ce4ea7ca", "3183db358a1afffbc4ab3e6a5b43667a");
+    }, "7030afe46543fd55a574b5bc51e45beb", "eca34735341fc7f44ac734745a19b3a4");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -113,7 +113,7 @@ public final class ExerciciosDatabase_Impl extends ExerciciosDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "exericios");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "exercicios");
   }
 
   @Override
@@ -122,7 +122,7 @@ public final class ExerciciosDatabase_Impl extends ExerciciosDatabase {
     final SupportSQLiteDatabase _db = super.getOpenHelper().getWritableDatabase();
     try {
       super.beginTransaction();
-      _db.execSQL("DELETE FROM `exericios`");
+      _db.execSQL("DELETE FROM `exercicios`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();

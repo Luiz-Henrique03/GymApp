@@ -22,7 +22,7 @@
 15-->[androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\24c8031572ced1a9ec505ef2513af626\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:5:5-38:19
+17-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:5:5-41:19
 18        android:allowBackup="true"
 18-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -44,82 +44,88 @@
 28-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:12:9-44
 29        <activity
 29-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:14:9-16:40
-30            android:name="com.example.aula20.view.ProfessorLoginActivity"
-30-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:15:13-56
+30            android:name="com.example.aula20.view.LoginUsuarioActivity"
+30-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:15:13-54
 31            android:exported="false" />
 31-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:16:13-37
 32        <activity
 32-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:17:9-19:40
-33            android:name="com.example.aula20.view.ExerciciosActivity"
-33-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:18:13-52
+33            android:name="com.example.aula20.view.ProfessorLoginActivity"
+33-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:18:13-56
 34            android:exported="false" />
 34-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:19:13-37
 35        <activity
 35-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:20:9-22:40
-36            android:name="com.example.aula20.view.CadastroUsuarioActivity"
-36-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:21:13-57
+36            android:name="com.example.aula20.view.ExerciciosActivity"
+36-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:21:13-52
 37            android:exported="false" />
 37-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:22:13-37
 38        <activity
 38-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:23:9-25:40
-39            android:name="com.example.aula20.view.LoginActivity"
-39-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:24:13-47
+39            android:name="com.example.aula20.view.CadastroUsuarioActivity"
+39-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:24:13-57
 40            android:exported="false" />
 40-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:25:13-37
 41        <activity
 41-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:26:9-28:40
-42            android:name="com.example.aula20.view.CadastroProfessorActivity"
-42-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:27:13-59
+42            android:name="com.example.aula20.view.LoginActivity"
+42-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:27:13-47
 43            android:exported="false" />
 43-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:28:13-37
 44        <activity
-44-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:29:9-37:20
-45            android:name="com.example.aula20.view.MainActivity"
-45-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:30:13-46
-46            android:exported="true" >
-46-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:31:13-36
-47            <intent-filter>
-47-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:32:13-36:29
-48                <action android:name="android.intent.action.MAIN" />
-48-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:33:17-69
-48-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:33:25-66
-49
-50                <category android:name="android.intent.category.LAUNCHER" />
-50-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:35:17-77
-50-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:35:27-74
-51            </intent-filter>
-52        </activity>
-53
-54        <service
-54-->[androidx.room:room-runtime:2.5.2] C:\Users\User\.gradle\caches\transforms-3\79b9754013a202e9ac9b41ff1e562b00\transformed\room-runtime-2.5.2\AndroidManifest.xml:24:9-28:63
-55            android:name="androidx.room.MultiInstanceInvalidationService"
-55-->[androidx.room:room-runtime:2.5.2] C:\Users\User\.gradle\caches\transforms-3\79b9754013a202e9ac9b41ff1e562b00\transformed\room-runtime-2.5.2\AndroidManifest.xml:25:13-74
-56            android:directBootAware="true"
-56-->[androidx.room:room-runtime:2.5.2] C:\Users\User\.gradle\caches\transforms-3\79b9754013a202e9ac9b41ff1e562b00\transformed\room-runtime-2.5.2\AndroidManifest.xml:26:13-43
-57            android:exported="false" />
-57-->[androidx.room:room-runtime:2.5.2] C:\Users\User\.gradle\caches\transforms-3\79b9754013a202e9ac9b41ff1e562b00\transformed\room-runtime-2.5.2\AndroidManifest.xml:27:13-37
-58
-59        <provider
-59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-60            android:name="androidx.startup.InitializationProvider"
-60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-61            android:authorities="com.example.aula20.androidx-startup"
-61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-62            android:exported="false" >
-62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-63            <meta-data
-63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-64                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-65                android:value="androidx.startup" />
-65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+44-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:29:9-31:40
+45            android:name="com.example.aula20.view.CadastroProfessorActivity"
+45-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:30:13-59
+46            android:exported="false" />
+46-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:31:13-37
+47        <activity
+47-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:32:9-40:20
+48            android:name="com.example.aula20.view.MainActivity"
+48-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:33:13-46
+49            android:exported="true" >
+49-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:34:13-36
+50            <intent-filter>
+50-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:35:13-39:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:36:17-69
+51-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:36:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:38:17-77
+53-->C:\Users\User\Desktop\TrabalhodoCorno\GymApp\GymApp-master\Aula20\app\src\main\AndroidManifest.xml:38:27-74
+54            </intent-filter>
+55        </activity>
+56
+57        <service
+57-->[androidx.room:room-runtime:2.5.2] C:\Users\User\.gradle\caches\transforms-3\79b9754013a202e9ac9b41ff1e562b00\transformed\room-runtime-2.5.2\AndroidManifest.xml:24:9-28:63
+58            android:name="androidx.room.MultiInstanceInvalidationService"
+58-->[androidx.room:room-runtime:2.5.2] C:\Users\User\.gradle\caches\transforms-3\79b9754013a202e9ac9b41ff1e562b00\transformed\room-runtime-2.5.2\AndroidManifest.xml:25:13-74
+59            android:directBootAware="true"
+59-->[androidx.room:room-runtime:2.5.2] C:\Users\User\.gradle\caches\transforms-3\79b9754013a202e9ac9b41ff1e562b00\transformed\room-runtime-2.5.2\AndroidManifest.xml:26:13-43
+60            android:exported="false" />
+60-->[androidx.room:room-runtime:2.5.2] C:\Users\User\.gradle\caches\transforms-3\79b9754013a202e9ac9b41ff1e562b00\transformed\room-runtime-2.5.2\AndroidManifest.xml:27:13-37
+61
+62        <provider
+62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+63            android:name="androidx.startup.InitializationProvider"
+63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+64            android:authorities="com.example.aula20.androidx-startup"
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+65            android:exported="false" >
+65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 66            <meta-data
-66-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\2882a1b6f8a4e98c7a1903336c452fc8\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-67                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-67-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\2882a1b6f8a4e98c7a1903336c452fc8\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+67                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 68                android:value="androidx.startup" />
-68-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\2882a1b6f8a4e98c7a1903336c452fc8\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-69        </provider>
-70    </application>
-71
-72</manifest>
+68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\ae62b2ed57c08e4ce03649c04da30a3c\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+69            <meta-data
+69-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\2882a1b6f8a4e98c7a1903336c452fc8\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+70                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+70-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\2882a1b6f8a4e98c7a1903336c452fc8\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+71                android:value="androidx.startup" />
+71-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\2882a1b6f8a4e98c7a1903336c452fc8\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+72        </provider>
+73    </application>
+74
+75</manifest>

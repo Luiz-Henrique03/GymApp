@@ -19,8 +19,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, CadastroProfessorActivity::class.java))
         }
 
+        binding.btnCadastrar.setOnClickListener {
+            startActivity(Intent(this,CadastroUsuarioActivity::class.java))
+        }
+
         binding.btnLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
+        }
+
+
+        binding.btnLoginUsuario.setOnClickListener {
+            startActivity(Intent(this,LoginUsuarioActivity::class.java))
         }
 
     }

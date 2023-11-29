@@ -2,6 +2,7 @@ package com.example.aula20.repository
 
 import android.content.Context
 import com.example.aula20.model.Usuario
+import com.example.aula20.view.UsuarioDataBase
 
 class UsuarioRepository(context: Context) {
 

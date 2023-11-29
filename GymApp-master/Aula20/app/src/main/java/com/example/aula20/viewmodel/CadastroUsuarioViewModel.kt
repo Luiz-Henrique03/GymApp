@@ -19,7 +19,7 @@ class CadastroUsuarioViewModel(application: Application) : AndroidViewModel(appl
         return txtToast
     }
 
-    fun salvar(nome : String,email : String ,senha : String, id_professor : Int) : Boolean {
+    fun salvar(nome: String, email: String, senha: String, professor: String) : Boolean {
 
         // validar se campo está em branco
         if (validarUsuario.verificarCampoEmBranco(nome,senha,email)){
@@ -28,7 +28,7 @@ class CadastroUsuarioViewModel(application: Application) : AndroidViewModel(appl
         }
 
         // criar objeto do tipo tarefa
-        var usuario = Usuario(0, nome,email,senha,id_professor)
+        var usuario = Usuario(0, nome,email,senha,professor)
 
         // tentar salvar objeto tarefa criado acima
         if (!usuarioRepository.salvar(usuario)) {

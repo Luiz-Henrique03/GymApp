@@ -19,9 +19,9 @@ interface ExerciciosDAO {
     @Update
     fun atualizarExercicio (exercicios: Exercicios)
 
-    @Query("SELECT * FROM exericios WHERE id = :id")
+    @Query("SELECT * FROM exercicios WHERE id = :id")
     fun getExercicio(id: Int) : Exercicios
 
-    @Query("SELECT * FROM exericios")
+    @Query("SELECT * FROM exercicios")
     fun getExercicios() : List<Exercicios>
 }

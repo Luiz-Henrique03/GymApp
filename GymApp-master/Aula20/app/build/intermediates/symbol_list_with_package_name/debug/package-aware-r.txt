@@ -3112,7 +3112,9 @@ id btnArrumeSe
 id btnCadastrar
 id btnCadastrarProfessor
 id btnLogin
+id btnLoginUsuario
 id btnSalvar
+id btnSalvarUsuario
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3188,8 +3190,11 @@ id east
 id edge
 id edit_query
 id edtEmail
+id edtEmailUsuario
 id edtNome
+id edtNomeUsuario
 id edtSenha
+id edtSenhaUsuario
 id elastic
 id embed
 id end
@@ -3433,6 +3438,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinnerProfessores
 id spline
 id split_action_bar
 id spread
@@ -3636,10 +3642,11 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_cadastro
 layout activity_cadastro_prof
+layout activity_cadastro_user
 layout activity_exercicios
 layout activity_login
+layout activity_login_usuario
 layout activity_main
 layout activity_professor
 layout custom_dialog

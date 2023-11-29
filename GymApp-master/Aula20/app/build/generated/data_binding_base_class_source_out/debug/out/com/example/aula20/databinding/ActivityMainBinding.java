@@ -30,6 +30,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnLogin;
 
   @NonNull
+  public final Button btnLoginUsuario;
+
+  @NonNull
   public final ImageView imageView2;
 
   @NonNull
@@ -37,11 +40,13 @@ public final class ActivityMainBinding implements ViewBinding {
 
   private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull Button btnCadastrar,
       @NonNull Button btnCadastrarProfessor, @NonNull Button btnLogin,
-      @NonNull ImageView imageView2, @NonNull ImageView imageView3) {
+      @NonNull Button btnLoginUsuario, @NonNull ImageView imageView2,
+      @NonNull ImageView imageView3) {
     this.rootView = rootView;
     this.btnCadastrar = btnCadastrar;
     this.btnCadastrarProfessor = btnCadastrarProfessor;
     this.btnLogin = btnLogin;
+    this.btnLoginUsuario = btnLoginUsuario;
     this.imageView2 = imageView2;
     this.imageView3 = imageView3;
   }
@@ -91,6 +96,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnLoginUsuario;
+      Button btnLoginUsuario = ViewBindings.findChildViewById(rootView, id);
+      if (btnLoginUsuario == null) {
+        break missingId;
+      }
+
       id = R.id.imageView2;
       ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
       if (imageView2 == null) {
@@ -104,7 +115,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((LinearLayout) rootView, btnCadastrar, btnCadastrarProfessor,
-          btnLogin, imageView2, imageView3);
+          btnLogin, btnLoginUsuario, imageView2, imageView3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

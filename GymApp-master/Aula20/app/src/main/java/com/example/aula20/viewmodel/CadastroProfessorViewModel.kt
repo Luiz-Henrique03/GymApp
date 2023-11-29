@@ -5,13 +5,14 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.aula20.model.Professor
+import com.example.aula20.model.ValidarProfessor
 import com.example.aula20.model.ValidarUsuario
 import com.example.aula20.repository.ProfessorRepository
 
 class CadastroProfessorViewModel(application: Application) : AndroidViewModel(application) {
 
     private var txtToast = MutableLiveData<String>()
-    private var validarUsuario = ValidarUsuario()
+    private var validarProfessor = ValidarProfessor()
     private var professorRepository = ProfessorRepository(application.applicationContext)
 
     fun getTxtToast() : LiveData<String> {
@@ -21,7 +22,7 @@ class CadastroProfessorViewModel(application: Application) : AndroidViewModel(ap
     fun salvar(nome : String,email : String ,senha : String) : Boolean {
 
         // validar se campo está em branco
-        if (validarUsuario.verificarCampoEmBranco(nome,senha,email)){
+        if (validarProfessor.verificarCampoEmBrancoProfessor(nome,senha,email)){
             txtToast.value = "Professor com cadastro incompleto"
             return false
         }
