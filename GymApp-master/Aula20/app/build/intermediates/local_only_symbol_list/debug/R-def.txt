@@ -33,7 +33,6 @@ id exercise5
 id exercise6
 id exercise7
 id exercise8
-id exerciseRadioGroup
 id imageView
 id imageView2
 id imageView3

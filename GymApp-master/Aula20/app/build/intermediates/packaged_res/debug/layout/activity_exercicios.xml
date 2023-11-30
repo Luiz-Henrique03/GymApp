@@ -8,56 +8,52 @@
     tools:context=".view.ExerciciosActivity">
 
     <!-- RadioGroup para exercícios -->
-    <RadioGroup
-        android:id="@+id/exerciseRadioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+
 
         <!-- RadioButton para cada exercício -->
-        <RadioButton
+        <CheckBox
             android:id="@+id/exercise1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Supino reto"/>
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/exercise2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Supino declinado"/>
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/exercise3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rosca alternado"/>
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/exercise4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Flexão"/>
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/exercise5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Remada"/>
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/exercise6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Remada polia baixa"/>
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/exercise7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Esteira"/>
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/exercise8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,12 +61,12 @@
 
 
 
-    </RadioGroup>
+
 
     <Button
         android:id="@+id/btnCadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cadastar"
+        android:text="Cadastrar"
         android:layout_marginLeft="150dp"/>
 </LinearLayout>

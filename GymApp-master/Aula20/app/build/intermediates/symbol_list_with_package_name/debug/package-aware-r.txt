@@ -3209,7 +3209,6 @@ id exercise5
 id exercise6
 id exercise7
 id exercise8
-id exerciseRadioGroup
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu

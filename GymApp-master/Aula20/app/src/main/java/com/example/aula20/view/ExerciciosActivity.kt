@@ -2,8 +2,7 @@ package com.example.aula20.view
 
 import android.os.Bundle
 import android.view.View
-import android.widget.RadioButton
-import android.widget.RadioGroup
+import android.widget.CheckBox
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.aula20.databinding.ActivityExerciciosBinding
@@ -17,14 +16,29 @@ class ExerciciosActivity : AppCompatActivity() {
         binding = ActivityExerciciosBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Manipular a seleção do RadioButton usando vinculação de dados
-        binding.btnCadastrar.setOnClickListener {
-            val selectedId = binding.exerciseRadioGroup.checkedRadioButtonId
-            if (selectedId != -1) {
-                val selectedRadioButton = findViewById<RadioButton>(selectedId)
-                val selectedExercise = selectedRadioButton.text.toString()
+        val checkBoxList = listOf(
+            binding.exercise1,
+            binding.exercise2,
+            binding.exercise3,
+            binding.exercise4,
+            binding.exercise5,
+            binding.exercise6,
+            binding.exercise7,
+            binding.exercise8
+        )
 
-                Toast.makeText(this, "Exercício selecionado: $selectedExercise", Toast.LENGTH_SHORT).show()
+        binding.btnCadastrar.setOnClickListener {
+            val selectedExercises = mutableListOf<String>()
+
+            for (checkBox in checkBoxList) {
+                if (checkBox.isChecked) {
+                    selectedExercises.add(checkBox.text.toString())
+                }
+            }
+
+            if (selectedExercises.isNotEmpty()) {
+                val selectedExercisesString = selectedExercises.joinToString(", ")
+                Toast.makeText(this, "Exercícios selecionados: $selectedExercisesString", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Nenhum exercício selecionado", Toast.LENGTH_SHORT).show()
             }

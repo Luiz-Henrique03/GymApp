@@ -3208,7 +3208,6 @@ int id exercise5 0x7f0800c2
 int id exercise6 0x7f0800c3
 int id exercise7 0x7f0800c4
 int id exercise8 0x7f0800c5
-int id exerciseRadioGroup 0x7f0800c6
 int id exitUntilCollapsed 0x7f0800c7
 int id expand_activities_button 0x7f0800c8
 int id expanded_menu 0x7f0800c9
