@@ -8,7 +8,12 @@
     tools:context=".view.ExerciciosActivity">
 
     <!-- RadioGroup para exercícios -->
-
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:layout_marginLeft="150dp"/>
 
         <!-- RadioButton para cada exercício -->
         <CheckBox
@@ -59,14 +64,23 @@
             android:layout_height="wrap_content"
             android:text="Francês"/>
 
+    <Spinner
+        android:id="@+id/spinnerProfessores"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginVertical="20dp"/>
 
+    <Spinner
+        android:id="@+id/spinnerDiasSemana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
 
-
-
-    <Button
-        android:id="@+id/btnCadastrar"
+    <EditText
+        android:id="@+id/edtSeries"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cadastrar"
-        android:layout_marginLeft="150dp"/>
+        android:hint="Series"/>
+
+
 </LinearLayout>

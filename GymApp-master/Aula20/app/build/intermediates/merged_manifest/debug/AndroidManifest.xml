@@ -27,6 +27,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.Aula20" >
         <activity
+            android:name="com.example.aula20.view.ListagemProfessorActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.aula20.view.UsuarioActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.aula20.view.LoginUsuarioActivity"
             android:exported="false" />
         <activity

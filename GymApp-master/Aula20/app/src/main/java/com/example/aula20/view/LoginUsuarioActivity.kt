@@ -1,5 +1,6 @@
 package com.example.aula20.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +8,7 @@ import android.widget.Toast
 import com.example.aula20.R
 import com.example.aula20.databinding.ActivityLoginBinding
 import com.example.aula20.databinding.ActivityLoginUsuarioBinding
+import com.example.aula20.databinding.ActivityUsuarioBinding
 
 import com.example.aula20.repository.UsuarioDAO
 
@@ -30,7 +32,9 @@ class LoginUsuarioActivity : AppCompatActivity() {
 
             if (usuario != null && senha == usuario.Senha) {
 
-                Log.d("LoginActivity", "Usuário logado - Nome: $nome, Senha: $senha")
+                startActivity(Intent(this,UsuarioActivity::class.java))
+                //Log.d("LoginActivity", "Tentativa de login inválida - Nome: $nome, Senha: $senha")
+
             } else {
 
                 Log.d("LoginActivity", "Tentativa de login inválida - Nome: $nome, Senha: $senha")

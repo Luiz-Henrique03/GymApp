@@ -32,13 +32,17 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
     this.__insertionAdapterOfExercicios = new EntityInsertionAdapter<Exercicios>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `exercicios` (`id`,`id_aluno`,`nome`,`Series`,`Dias_da_semana`) VALUES (nullif(?, 0),?,?,?,?)";
+        return "INSERT OR ABORT INTO `exercicios` (`id`,`professor`,`nome`,`Series`,`Dias_da_semana`) VALUES (nullif(?, 0),?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Exercicios value) {
         stmt.bindLong(1, value.getId());
-        stmt.bindLong(2, value.getId_aluno());
+        if (value.getProfessor() == null) {
+          stmt.bindNull(2);
+        } else {
+          stmt.bindString(2, value.getProfessor());
+        }
         if (value.getNome() == null) {
           stmt.bindNull(3);
         } else {
@@ -70,13 +74,17 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
     this.__updateAdapterOfExercicios = new EntityDeletionOrUpdateAdapter<Exercicios>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `exercicios` SET `id` = ?,`id_aluno` = ?,`nome` = ?,`Series` = ?,`Dias_da_semana` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `exercicios` SET `id` = ?,`professor` = ?,`nome` = ?,`Series` = ?,`Dias_da_semana` = ? WHERE `id` = ?";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Exercicios value) {
         stmt.bindLong(1, value.getId());
-        stmt.bindLong(2, value.getId_aluno());
+        if (value.getProfessor() == null) {
+          stmt.bindNull(2);
+        } else {
+          stmt.bindString(2, value.getProfessor());
+        }
         if (value.getNome() == null) {
           stmt.bindNull(3);
         } else {
@@ -144,7 +152,7 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
-      final int _cursorIndexOfIdAluno = CursorUtil.getColumnIndexOrThrow(_cursor, "id_aluno");
+      final int _cursorIndexOfProfessor = CursorUtil.getColumnIndexOrThrow(_cursor, "professor");
       final int _cursorIndexOfNome = CursorUtil.getColumnIndexOrThrow(_cursor, "nome");
       final int _cursorIndexOfSeries = CursorUtil.getColumnIndexOrThrow(_cursor, "Series");
       final int _cursorIndexOfDiasDaSemana = CursorUtil.getColumnIndexOrThrow(_cursor, "Dias_da_semana");
@@ -152,8 +160,12 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
       if(_cursor.moveToFirst()) {
         final int _tmpId;
         _tmpId = _cursor.getInt(_cursorIndexOfId);
-        final int _tmpId_aluno;
-        _tmpId_aluno = _cursor.getInt(_cursorIndexOfIdAluno);
+        final String _tmpProfessor;
+        if (_cursor.isNull(_cursorIndexOfProfessor)) {
+          _tmpProfessor = null;
+        } else {
+          _tmpProfessor = _cursor.getString(_cursorIndexOfProfessor);
+        }
         final String _tmpNome;
         if (_cursor.isNull(_cursorIndexOfNome)) {
           _tmpNome = null;
@@ -172,7 +184,7 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
         } else {
           _tmpDias_da_semana = _cursor.getString(_cursorIndexOfDiasDaSemana);
         }
-        _result = new Exercicios(_tmpId,_tmpId_aluno,_tmpNome,_tmpSeries,_tmpDias_da_semana);
+        _result = new Exercicios(_tmpId,_tmpProfessor,_tmpNome,_tmpSeries,_tmpDias_da_semana);
       } else {
         _result = null;
       }
@@ -191,7 +203,7 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
-      final int _cursorIndexOfIdAluno = CursorUtil.getColumnIndexOrThrow(_cursor, "id_aluno");
+      final int _cursorIndexOfProfessor = CursorUtil.getColumnIndexOrThrow(_cursor, "professor");
       final int _cursorIndexOfNome = CursorUtil.getColumnIndexOrThrow(_cursor, "nome");
       final int _cursorIndexOfSeries = CursorUtil.getColumnIndexOrThrow(_cursor, "Series");
       final int _cursorIndexOfDiasDaSemana = CursorUtil.getColumnIndexOrThrow(_cursor, "Dias_da_semana");
@@ -200,8 +212,12 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
         final Exercicios _item;
         final int _tmpId;
         _tmpId = _cursor.getInt(_cursorIndexOfId);
-        final int _tmpId_aluno;
-        _tmpId_aluno = _cursor.getInt(_cursorIndexOfIdAluno);
+        final String _tmpProfessor;
+        if (_cursor.isNull(_cursorIndexOfProfessor)) {
+          _tmpProfessor = null;
+        } else {
+          _tmpProfessor = _cursor.getString(_cursorIndexOfProfessor);
+        }
         final String _tmpNome;
         if (_cursor.isNull(_cursorIndexOfNome)) {
           _tmpNome = null;
@@ -220,7 +236,7 @@ public final class ExerciciosDAO_Impl implements ExerciciosDAO {
         } else {
           _tmpDias_da_semana = _cursor.getString(_cursorIndexOfDiasDaSemana);
         }
-        _item = new Exercicios(_tmpId,_tmpId_aluno,_tmpNome,_tmpSeries,_tmpDias_da_semana);
+        _item = new Exercicios(_tmpId,_tmpProfessor,_tmpNome,_tmpSeries,_tmpDias_da_semana);
         _result.add(_item);
       }
       return _result;

@@ -3194,6 +3194,7 @@ int id edtNome 0x7f0800b4
 int id edtNomeUsuario 0x7f0800b5
 int id edtSenha 0x7f0800b6
 int id edtSenhaUsuario 0x7f0800b7
+int id edtSeries 0x7f080207
 int id elastic 0x7f0800b8
 int id embed 0x7f0800b9
 int id end 0x7f0800ba
@@ -3270,6 +3271,7 @@ int id line1 0x7f080101
 int id line3 0x7f080102
 int id linear 0x7f080103
 int id listMode 0x7f080104
+int id listViewExercicios 0x7f080209
 int id list_item 0x7f080105
 int id m3_side_sheet 0x7f080106
 int id marquee 0x7f080107
@@ -3436,6 +3438,7 @@ int id snapMargins 0x7f0801a7
 int id south 0x7f0801a8
 int id spacer 0x7f0801a9
 int id special_effects_controller_view_tag 0x7f0801aa
+int id spinnerDiasSemana 0x7f080208
 int id spinnerProfessores 0x7f0801ab
 int id spline 0x7f0801ac
 int id split_action_bar 0x7f0801ad
@@ -3504,6 +3507,7 @@ int id transition_position 0x7f0801eb
 int id transition_scene_layoutid_cache 0x7f0801ec
 int id transition_transform 0x7f0801ed
 int id triangle 0x7f0801ee
+int id tvUserName 0x7f08020a
 int id unchecked 0x7f0801ef
 int id uniform 0x7f0801f0
 int id unlabeled 0x7f0801f1
@@ -3643,10 +3647,12 @@ int layout abc_tooltip 0x7f0b001b
 int layout activity_cadastro_prof 0x7f0b001c
 int layout activity_cadastro_user 0x7f0b001d
 int layout activity_exercicios 0x7f0b001e
+int layout activity_listagem_professor 0x7f0b0070
 int layout activity_login 0x7f0b001f
 int layout activity_login_usuario 0x7f0b006f
 int layout activity_main 0x7f0b0020
 int layout activity_professor 0x7f0b0021
+int layout activity_usuario 0x7f0b0071
 int layout custom_dialog 0x7f0b0022
 int layout design_bottom_navigation_item 0x7f0b0023
 int layout design_bottom_sheet_dialog 0x7f0b0024

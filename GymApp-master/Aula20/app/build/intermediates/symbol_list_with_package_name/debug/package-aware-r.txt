@@ -3195,6 +3195,7 @@ id edtNome
 id edtNomeUsuario
 id edtSenha
 id edtSenhaUsuario
+id edtSeries
 id elastic
 id embed
 id end
@@ -3271,6 +3272,7 @@ id line1
 id line3
 id linear
 id listMode
+id listViewExercicios
 id list_item
 id m3_side_sheet
 id marquee
@@ -3437,6 +3439,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinnerDiasSemana
 id spinnerProfessores
 id spline
 id split_action_bar
@@ -3505,6 +3508,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvUserName
 id unchecked
 id uniform
 id unlabeled
@@ -3644,10 +3648,12 @@ layout abc_tooltip
 layout activity_cadastro_prof
 layout activity_cadastro_user
 layout activity_exercicios
+layout activity_listagem_professor
 layout activity_login
 layout activity_login_usuario
 layout activity_main
 layout activity_professor
+layout activity_usuario
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

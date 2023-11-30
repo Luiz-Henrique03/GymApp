@@ -37,9 +37,9 @@ public final class ExerciciosDatabase_Impl extends ExerciciosDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `exercicios` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id_aluno` INTEGER NOT NULL, `nome` TEXT NOT NULL, `Series` TEXT NOT NULL, `Dias_da_semana` TEXT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `exercicios` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `professor` TEXT NOT NULL, `nome` TEXT NOT NULL, `Series` TEXT NOT NULL, `Dias_da_semana` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7030afe46543fd55a574b5bc51e45beb')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a8eb5e8facd264850586e1e8fbfc5ad6')");
       }
 
       @Override
@@ -85,7 +85,7 @@ public final class ExerciciosDatabase_Impl extends ExerciciosDatabase {
       public RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
         final HashMap<String, TableInfo.Column> _columnsExercicios = new HashMap<String, TableInfo.Column>(5);
         _columnsExercicios.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsExercicios.put("id_aluno", new TableInfo.Column("id_aluno", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsExercicios.put("professor", new TableInfo.Column("professor", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsExercicios.put("nome", new TableInfo.Column("nome", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsExercicios.put("Series", new TableInfo.Column("Series", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsExercicios.put("Dias_da_semana", new TableInfo.Column("Dias_da_semana", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -100,7 +100,7 @@ public final class ExerciciosDatabase_Impl extends ExerciciosDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "7030afe46543fd55a574b5bc51e45beb", "eca34735341fc7f44ac734745a19b3a4");
+    }, "a8eb5e8facd264850586e1e8fbfc5ad6", "c54c6a91c802b5458c2b27cf97476754");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
