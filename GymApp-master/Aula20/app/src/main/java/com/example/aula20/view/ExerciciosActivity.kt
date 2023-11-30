@@ -3,6 +3,7 @@ package com.example.aula20.view
 import android.R
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.CheckBox
@@ -33,8 +34,14 @@ class ExerciciosActivity : AppCompatActivity() {
 
         val checkBoxList = listOf(
             binding.exercise1,
-            // Adicione outros CheckBoxes conforme necessário
-        )
+            binding.exercise2,
+            binding.exercise3,
+            binding.exercise4,
+            binding.exercise5,
+            binding.exercise6,
+            binding.exercise7,
+            binding.exercise8
+            )
 
         // Configurar o Spinner com a lista de dias da semana
         val diasDaSemana = arrayOf("Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado")
@@ -54,6 +61,7 @@ class ExerciciosActivity : AppCompatActivity() {
             for (checkBox in checkBoxList) {
                 if (checkBox.isChecked) {
                     selectedExercises.add(checkBox.text.toString())
+
                 }
             }
 
