@@ -1,118 +1,118 @@
 [
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\drawable_cariani.jpeg.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\drawable\\cariani.jpeg"
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.aula20.app-merged_res-33:/drawable_cariani.jpeg.flat",
+        "source": "com.example.aula20.app-main-35:/drawable/cariani.jpeg"
+    },
+    {
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
         "merged": "com.example.aula20.app-merged_res-33:/layout_activity_listagem_professor.xml.flat",
         "source": "com.example.aula20.app-main-35:/layout/activity_listagem_professor.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\xml\\data_extraction_rules.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/drawable_peso.jpeg.flat",
+        "source": "com.example.aula20.app-main-35:/drawable/peso.jpeg"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-anydpi-v33/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\layout_activity_professor.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_professor.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\drawable_peso.jpeg.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\drawable\\peso.jpeg"
+        "merged": "com.example.aula20.app-merged_res-33:/layout_activity_cadastro_prof.xml.flat",
+        "source": "com.example.aula20.app-main-35:/layout/activity_cadastro_prof.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.aula20.app-merged_res-33:/layout_activity_exercicios.xml.flat",
+        "source": "com.example.aula20.app-main-35:/layout/activity_exercicios.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_main.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.aula20.app-main-35:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\layout_activity_login_usuario.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_login_usuario.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/layout_activity_professor.xml.flat",
+        "source": "com.example.aula20.app-main-35:/layout/activity_professor.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\xml\\backup_rules.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/layout_activity_login.xml.flat",
+        "source": "com.example.aula20.app-main-35:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.aula20.app-merged_res-33:/xml_backup_rules.xml.flat",
+        "source": "com.example.aula20.app-main-35:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\layout_activity_cadastro_user.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_cadastro_user.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/layout_activity_main.xml.flat",
+        "source": "com.example.aula20.app-main-35:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-xxxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.aula20.app-merged_res-33:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.aula20.app-main-35:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "com.example.aula20.app-merged_res-33:/layout_activity_usuario.xml.flat",
         "source": "com.example.aula20.app-main-35:/layout/activity_usuario.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\layout_activity_exercicios.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_exercicios.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-anydpi-v33\\ic_launcher.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\layout_activity_cadastro_prof.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_cadastro_prof.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.aula20.app-merged_res-33:/layout_activity_login_usuario.xml.flat",
+        "source": "com.example.aula20.app-main-35:/layout/activity_login_usuario.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.aula20.app-merged_res-33:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.aula20.app-main-35:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\drawable_images.jpeg.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\drawable\\images.jpeg"
+        "merged": "com.example.aula20.app-merged_res-33:/drawable_images.jpeg.flat",
+        "source": "com.example.aula20.app-main-35:/drawable/images.jpeg"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_login.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/layout_activity_cadastro_user.xml.flat",
+        "source": "com.example.aula20.app-main-35:/layout/activity_cadastro_user.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.aula20.app-merged_res-33:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.aula20.app-main-35:/mipmap-mdpi/ic_launcher.webp"
     }
 ]

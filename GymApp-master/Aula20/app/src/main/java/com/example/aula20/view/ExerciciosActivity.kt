@@ -60,15 +60,17 @@ class ExerciciosActivity : AppCompatActivity() {
             if (selectedExercises.isNotEmpty()) {
                 val selectedExercisesString = selectedExercises.toString()
                 val selectedProfessorName = binding.spinnerProfessores.selectedItem.toString()
-                val selectedProfessor = professorDAO.getProfessorPorNome(selectedProfessorName)
                 val selectedDayOfWeek = binding.spinnerDiasSemana.selectedItem.toString()
                 val series = binding.edtSeries.toString()
 
-                Toast.makeText(this, "Exercícios selecionados: $selectedExercisesString", Toast.LENGTH_SHORT).show()
+                val selectedProfessor = professorDAO.getProfessorPorNome(selectedProfessorName)
+                val professorName = selectedProfessor?.nome ?: ""
 
-                exerciciosViewModel.salvar(selectedProfessor.toString(),selectedExercisesString,series,selectedDayOfWeek)
+                Toast.makeText(this, "Exercícios selecionados: $selectedExercisesString\nProfessor: $professorName", Toast.LENGTH_SHORT).show()
 
-                startActivity(Intent(this, CadastroProfessorActivity::class.java))
+                exerciciosViewModel.salvar(professorName, selectedExercisesString, series, selectedDayOfWeek)
+
+                startActivity(Intent(this, MainActivity::class.java))
             } else {
                 Toast.makeText(this, "Nenhum exercício selecionado", Toast.LENGTH_SHORT).show()
             }
