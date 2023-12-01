@@ -55,14 +55,11 @@ public final class ActivityExerciciosBinding implements ViewBinding {
   @NonNull
   public final Spinner spinnerDiasSemana;
 
-  @NonNull
-  public final Spinner spinnerProfessores;
-
   private ActivityExerciciosBinding(@NonNull LinearLayout rootView, @NonNull Button btnCadastrar,
       @NonNull EditText edtSeries, @NonNull CheckBox exercise1, @NonNull CheckBox exercise2,
       @NonNull CheckBox exercise3, @NonNull CheckBox exercise4, @NonNull CheckBox exercise5,
       @NonNull CheckBox exercise6, @NonNull CheckBox exercise7, @NonNull CheckBox exercise8,
-      @NonNull Spinner spinnerDiasSemana, @NonNull Spinner spinnerProfessores) {
+      @NonNull Spinner spinnerDiasSemana) {
     this.rootView = rootView;
     this.btnCadastrar = btnCadastrar;
     this.edtSeries = edtSeries;
@@ -75,7 +72,6 @@ public final class ActivityExerciciosBinding implements ViewBinding {
     this.exercise7 = exercise7;
     this.exercise8 = exercise8;
     this.spinnerDiasSemana = spinnerDiasSemana;
-    this.spinnerProfessores = spinnerProfessores;
   }
 
   @Override
@@ -171,15 +167,9 @@ public final class ActivityExerciciosBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.spinnerProfessores;
-      Spinner spinnerProfessores = ViewBindings.findChildViewById(rootView, id);
-      if (spinnerProfessores == null) {
-        break missingId;
-      }
-
       return new ActivityExerciciosBinding((LinearLayout) rootView, btnCadastrar, edtSeries,
           exercise1, exercise2, exercise3, exercise4, exercise5, exercise6, exercise7, exercise8,
-          spinnerDiasSemana, spinnerProfessores);
+          spinnerDiasSemana);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -2934,6 +2934,7 @@ int drawable ic_mtrl_chip_checked_circle 0x7f070093
 int drawable ic_mtrl_chip_close_circle 0x7f070094
 int drawable ic_search_black_24 0x7f070095
 int drawable images 0x7f070096
+int drawable logoantifrango 0x7f0700e2
 int drawable m3_appbar_background 0x7f070097
 int drawable m3_avd_hide_password 0x7f070098
 int drawable m3_avd_show_password 0x7f070099

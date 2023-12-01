@@ -11,6 +11,7 @@ drawable cariani
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable images
+drawable logoantifrango
 drawable peso
 id btnArrumeSe
 id btnCadastrar

@@ -1,5 +1,6 @@
 package com.example.aula20.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -31,7 +32,11 @@ class CadastroProfessorActivity : AppCompatActivity() {
             // tentaremos salvar a tarefa no BD. Caso positivo, esta
             // activity será finalizada
             if (cadastroProfessorViewModel.salvar(nome,email,senha)){
-                finish()
+
+                val intent = Intent(this, ExerciciosActivity::class.java)
+                intent.putExtra("professor", nome) // Passa o objeto usuário para a próxima atividade
+                startActivity(intent)
+
             }
 
         }

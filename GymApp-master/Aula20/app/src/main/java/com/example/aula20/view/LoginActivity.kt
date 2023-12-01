@@ -30,7 +30,10 @@ class LoginActivity : AppCompatActivity() {
 
             if (professor != null && senha == professor.Senha) {
 
-                startActivity(Intent(this,ExerciciosActivity::class.java))
+                val intent = Intent(this, ExerciciosActivity::class.java)
+                intent.putExtra("professor", nome) // Passa o objeto usuário para a próxima atividade
+                startActivity(intent)
+
             } else {
 
                 Log.d("LoginActivity", "Tentativa de login inválida - Nome: $nome, Senha: $senha")

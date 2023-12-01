@@ -53,7 +53,6 @@ class ExerciciosActivity : AppCompatActivity() {
         val professorNames = professores.map { it.nome }
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, professorNames)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spinnerProfessores.adapter = adapter
 
         binding.btnCadastrar.setOnClickListener {
             val selectedExercises = mutableListOf<String>()
@@ -67,16 +66,14 @@ class ExerciciosActivity : AppCompatActivity() {
 
             if (selectedExercises.isNotEmpty()) {
                 val selectedExercisesString = selectedExercises.toString()
-                val selectedProfessorName = binding.spinnerProfessores.selectedItem.toString()
+                val professorName = intent.getStringExtra("professor")
                 val selectedDayOfWeek = binding.spinnerDiasSemana.selectedItem.toString()
                 val series = binding.edtSeries.toString()
 
-                val selectedProfessor = professorDAO.getProfessorPorNome(selectedProfessorName)
-                val professorName = selectedProfessor?.nome ?: ""
 
                 Toast.makeText(this, "Exercícios selecionados: $selectedExercisesString\nProfessor: $professorName", Toast.LENGTH_SHORT).show()
 
-                exerciciosViewModel.salvar(professorName, selectedExercisesString, series, selectedDayOfWeek)
+                exerciciosViewModel.salvar(professorName.toString(), selectedExercisesString, series, selectedDayOfWeek)
 
                 startActivity(Intent(this, MainActivity::class.java))
             } else {
