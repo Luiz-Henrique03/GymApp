@@ -3252,7 +3252,6 @@ id ignore
 id ignoreRequest
 id image
 id imageView
-id imageView2
 id imageView3
 id immediateStop
 id included
@@ -3516,6 +3515,7 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
+id videoView
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3735,6 +3735,7 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw background_video
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

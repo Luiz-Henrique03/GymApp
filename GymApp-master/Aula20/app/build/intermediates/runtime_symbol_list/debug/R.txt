@@ -3251,7 +3251,6 @@ int id ignore 0x7f0800ed
 int id ignoreRequest 0x7f0800ee
 int id image 0x7f0800ef
 int id imageView 0x7f0800f0
-int id imageView2 0x7f0800f1
 int id imageView3 0x7f0800f2
 int id immediateStop 0x7f0800f3
 int id included 0x7f0800f4
@@ -3515,6 +3514,7 @@ int id unlabeled 0x7f0801f5
 int id up 0x7f0801f6
 int id useLogo 0x7f0801f7
 int id vertical_only 0x7f0801f8
+int id videoView 0x7f08020a
 int id view_offset_helper 0x7f0801f9
 int id view_transition 0x7f0801fa
 int id view_tree_lifecycle_owner 0x7f0801fb
@@ -3734,6 +3734,7 @@ int layout support_simple_spinner_dropdown_item 0x7f0b0071
 int mipmap ic_launcher 0x7f0d0000
 int mipmap ic_launcher_round 0x7f0d0001
 int plurals mtrl_badge_content_description 0x7f0e0000
+int raw background_video 0x7f130000
 int string abc_action_bar_home_description 0x7f0f0000
 int string abc_action_bar_up_description 0x7f0f0001
 int string abc_action_menu_overflow_description 0x7f0f0002

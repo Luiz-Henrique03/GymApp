@@ -36,12 +36,12 @@ id exercise6
 id exercise7
 id exercise8
 id imageView
-id imageView2
 id imageView3
 id listViewExercicios
 id spinnerDiasSemana
 id spinnerProfessores
 id tvUserName
+id videoView
 layout activity_cadastro_prof
 layout activity_cadastro_user
 layout activity_exercicios
@@ -53,6 +53,7 @@ layout activity_professor
 layout activity_usuario
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw background_video
 string app_name
 style Theme.Aula20
 xml backup_rules
