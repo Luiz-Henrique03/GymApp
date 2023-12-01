@@ -15,6 +15,7 @@ drawable jaofrango
 drawable loginusuarioapp
 drawable logoantifrango
 drawable peso
+drawable serjao
 drawable telaexercicios
 id btnArrumeSe
 id btnCadastrar
