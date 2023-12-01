@@ -5,64 +5,105 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/telaexercicios"
     tools:context=".view.ExerciciosActivity">
 
     <!-- RadioGroup para exercícios -->
-    <Button
-        android:id="@+id/btnCadastrar"
-        android:layout_width="wrap_content"
+
+
+    <!-- RadioButton para cada exercício -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cadastrar"
-        android:layout_marginLeft="150dp"/>
+        android:text="Tela de Exercicios"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold" />
 
-        <!-- RadioButton para cada exercício -->
-        <CheckBox
-            android:id="@+id/exercise1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Supino reto"/>
+    <CheckBox
+        android:id="@+id/exercise1"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="#FF0000"
+        android:text="Supino reto"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/exercise2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Supino declinado"/>
+    <CheckBox
+        android:id="@+id/exercise2"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="#FF0000"
+        android:text="Supino declinado"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/exercise3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rosca alternado"/>
+    <CheckBox
+        android:id="@+id/exercise3"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="#FF0000"
+        android:text="Rosca alternado"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/exercise4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Flexão"/>
+    <CheckBox
+        android:id="@+id/exercise4"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="#FF0000"
+        android:text="Flexão"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/exercise5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Remada"/>
+    <CheckBox
+        android:id="@+id/exercise5"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="#FF0000"
+        android:text="Remada"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/exercise6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Remada polia baixa"/>
+    <CheckBox
+        android:id="@+id/exercise6"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="#FF0000"
+        android:text="Remada polia baixa"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/exercise7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Esteira"/>
+    <CheckBox
+        android:id="@+id/exercise7"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="#FF0000"
+        android:text="Esteira"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/exercise8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Francês"/>
+    <CheckBox
+        android:id="@+id/exercise8"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="#FF0000"
+        android:lineSpacingExtra="8sp"
+        android:text="Francês"
+        android:textAlignment="viewStart"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <Spinner
         android:id="@+id/spinnerDiasSemana"
@@ -70,12 +111,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"/>
 
-
-    <EditText
-        android:id="@+id/edtSeries"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Series"/>
-
-
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="138dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#000000"
+        android:text="Cadastrar"
+        android:textColor="#FF0000" />
 </LinearLayout>

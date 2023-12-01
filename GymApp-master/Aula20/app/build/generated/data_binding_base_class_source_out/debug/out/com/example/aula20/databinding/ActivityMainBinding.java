@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.VideoView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -34,22 +33,22 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnLoginUsuario;
 
   @NonNull
-  public final ImageView imageView3;
+  public final ImageView imageView2;
 
   @NonNull
-  public final VideoView videoView;
+  public final ImageView imageView3;
 
   private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull Button btnCadastrar,
       @NonNull Button btnCadastrarProfessor, @NonNull Button btnLogin,
-      @NonNull Button btnLoginUsuario, @NonNull ImageView imageView3,
-      @NonNull VideoView videoView) {
+      @NonNull Button btnLoginUsuario, @NonNull ImageView imageView2,
+      @NonNull ImageView imageView3) {
     this.rootView = rootView;
     this.btnCadastrar = btnCadastrar;
     this.btnCadastrarProfessor = btnCadastrarProfessor;
     this.btnLogin = btnLogin;
     this.btnLoginUsuario = btnLoginUsuario;
+    this.imageView2 = imageView2;
     this.imageView3 = imageView3;
-    this.videoView = videoView;
   }
 
   @Override
@@ -103,20 +102,20 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.imageView2;
+      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView2 == null) {
+        break missingId;
+      }
+
       id = R.id.imageView3;
       ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
       if (imageView3 == null) {
         break missingId;
       }
 
-      id = R.id.videoView;
-      VideoView videoView = ViewBindings.findChildViewById(rootView, id);
-      if (videoView == null) {
-        break missingId;
-      }
-
       return new ActivityMainBinding((LinearLayout) rootView, btnCadastrar, btnCadastrarProfessor,
-          btnLogin, btnLoginUsuario, imageView3, videoView);
+          btnLogin, btnLoginUsuario, imageView2, imageView3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

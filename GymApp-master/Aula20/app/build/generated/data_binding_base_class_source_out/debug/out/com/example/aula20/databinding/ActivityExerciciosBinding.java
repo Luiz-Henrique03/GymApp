@@ -6,9 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -24,9 +24,6 @@ public final class ActivityExerciciosBinding implements ViewBinding {
 
   @NonNull
   public final Button btnCadastrar;
-
-  @NonNull
-  public final EditText edtSeries;
 
   @NonNull
   public final CheckBox exercise1;
@@ -55,14 +52,16 @@ public final class ActivityExerciciosBinding implements ViewBinding {
   @NonNull
   public final Spinner spinnerDiasSemana;
 
+  @NonNull
+  public final TextView textView;
+
   private ActivityExerciciosBinding(@NonNull LinearLayout rootView, @NonNull Button btnCadastrar,
-      @NonNull EditText edtSeries, @NonNull CheckBox exercise1, @NonNull CheckBox exercise2,
-      @NonNull CheckBox exercise3, @NonNull CheckBox exercise4, @NonNull CheckBox exercise5,
-      @NonNull CheckBox exercise6, @NonNull CheckBox exercise7, @NonNull CheckBox exercise8,
-      @NonNull Spinner spinnerDiasSemana) {
+      @NonNull CheckBox exercise1, @NonNull CheckBox exercise2, @NonNull CheckBox exercise3,
+      @NonNull CheckBox exercise4, @NonNull CheckBox exercise5, @NonNull CheckBox exercise6,
+      @NonNull CheckBox exercise7, @NonNull CheckBox exercise8, @NonNull Spinner spinnerDiasSemana,
+      @NonNull TextView textView) {
     this.rootView = rootView;
     this.btnCadastrar = btnCadastrar;
-    this.edtSeries = edtSeries;
     this.exercise1 = exercise1;
     this.exercise2 = exercise2;
     this.exercise3 = exercise3;
@@ -72,6 +71,7 @@ public final class ActivityExerciciosBinding implements ViewBinding {
     this.exercise7 = exercise7;
     this.exercise8 = exercise8;
     this.spinnerDiasSemana = spinnerDiasSemana;
+    this.textView = textView;
   }
 
   @Override
@@ -104,12 +104,6 @@ public final class ActivityExerciciosBinding implements ViewBinding {
       id = R.id.btnCadastrar;
       Button btnCadastrar = ViewBindings.findChildViewById(rootView, id);
       if (btnCadastrar == null) {
-        break missingId;
-      }
-
-      id = R.id.edtSeries;
-      EditText edtSeries = ViewBindings.findChildViewById(rootView, id);
-      if (edtSeries == null) {
         break missingId;
       }
 
@@ -167,9 +161,15 @@ public final class ActivityExerciciosBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityExerciciosBinding((LinearLayout) rootView, btnCadastrar, edtSeries,
-          exercise1, exercise2, exercise3, exercise4, exercise5, exercise6, exercise7, exercise8,
-          spinnerDiasSemana);
+      id = R.id.textView;
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
+        break missingId;
+      }
+
+      return new ActivityExerciciosBinding((LinearLayout) rootView, btnCadastrar, exercise1,
+          exercise2, exercise3, exercise4, exercise5, exercise6, exercise7, exercise8,
+          spinnerDiasSemana, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

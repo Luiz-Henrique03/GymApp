@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#4169E1">
+    android:background="#000000">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bem vindo frango"
+        android:text="Bem vindo professor do frango"
         android:gravity="center"
         android:textSize="26sp"
         android:textColor="#FFFFFF"
@@ -18,22 +18,23 @@
 
     <EditText
         android:id="@+id/edtNome"
+        android:background="#11FFFF"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:hint="Nome"
         android:layout_marginVertical="20dp"
         android:inputType="textPersonName"
-        android:textColor="#FFFFFF" />
+        android:textColor="#000000" />
 
     <EditText
+        android:background="#11FFFF"
         android:id="@+id/edtSenha"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:hint="Senha"
         android:layout_marginVertical="20dp"
         android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:background="#4169E1" />
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/btnArrumeSe"
@@ -41,7 +42,7 @@
         android:layout_height="45dp"
         android:text="ENTRE"
         android:textColor="#FFFFFF"
-        android:background="#4169E1" />
+        app:rippleColor="#9C27B0" />
 
     <ImageView
         android:id="@+id/imageView"

@@ -12,12 +12,12 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\layout_activity_professor.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_professor.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\drawable_peso.jpeg.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\drawable\\peso.jpeg"
+    },
+    {
+        "merged": "com.example.aula20.app-merged_res-33:/layout_activity_exercicios.xml.flat",
+        "source": "com.example.aula20.app-main-35:/layout/activity_exercicios.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -56,6 +56,14 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_cadastro_user.xml"
     },
     {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\drawable_jaofrango.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\drawable\\jaofrango.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\drawable_loginusuarioapp.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\drawable\\loginusuarioapp.png"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-hdpi\\ic_launcher.webp"
     },
@@ -76,24 +84,24 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.aula20.app-merged_res-33:/layout_activity_main.xml.flat",
-        "source": "com.example.aula20.app-main-35:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\raw_background_video.mp4.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\raw\\background_video.mp4"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\layout_activity_exercicios.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_exercicios.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\mipmap-anydpi-v33\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\layout_activity_exercicios.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_exercicios.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\raw_background_video.mp4.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\raw\\background_video.mp4"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\drawable_telaexercicios.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\drawable\\telaexercicios.png"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-merged_res-33:\\layout_activity_cadastro_prof.xml.flat",

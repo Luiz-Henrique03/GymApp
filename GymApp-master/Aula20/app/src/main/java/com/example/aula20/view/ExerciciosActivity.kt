@@ -68,12 +68,11 @@ class ExerciciosActivity : AppCompatActivity() {
                 val selectedExercisesString = selectedExercises.toString()
                 val professorName = intent.getStringExtra("professor")
                 val selectedDayOfWeek = binding.spinnerDiasSemana.selectedItem.toString()
-                val series = binding.edtSeries.toString()
 
 
                 Toast.makeText(this, "Exercícios selecionados: $selectedExercisesString\nProfessor: $professorName", Toast.LENGTH_SHORT).show()
 
-                exerciciosViewModel.salvar(professorName.toString(), selectedExercisesString, series, selectedDayOfWeek)
+                exerciciosViewModel.salvar(professorName.toString(), selectedExercisesString, "0", selectedDayOfWeek)
 
                 startActivity(Intent(this, MainActivity::class.java))
             } else {

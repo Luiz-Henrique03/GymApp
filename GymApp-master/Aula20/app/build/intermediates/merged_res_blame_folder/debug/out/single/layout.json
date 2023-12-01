@@ -8,20 +8,16 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_listagem_professor.xml"
     },
     {
-        "merged": "com.example.aula20.app-mergeDebugResources-32:/layout/activity_main.xml",
-        "source": "com.example.aula20.app-main-35:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-mergeDebugResources-32:\\layout\\activity_cadastro_user.xml",
         "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_cadastro_user.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-mergeDebugResources-32:\\layout\\activity_cadastro_prof.xml",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_cadastro_prof.xml"
+        "merged": "com.example.aula20.app-mergeDebugResources-32:/layout/activity_exercicios.xml",
+        "source": "com.example.aula20.app-main-35:/layout/activity_exercicios.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-mergeDebugResources-32:\\layout\\activity_professor.xml",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_professor.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-mergeDebugResources-32:\\layout\\activity_cadastro_prof.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-main-35:\\layout\\activity_cadastro_prof.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\7.5\\com.example.aula20.app-mergeDebugResources-32:\\layout\\activity_usuario.xml",

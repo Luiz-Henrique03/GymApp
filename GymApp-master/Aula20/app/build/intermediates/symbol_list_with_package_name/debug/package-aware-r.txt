@@ -2935,6 +2935,8 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable images
+drawable jaofrango
+drawable loginusuarioapp
 drawable logoantifrango
 drawable m3_appbar_background
 drawable m3_avd_hide_password
@@ -3008,6 +3010,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable peso
+drawable telaexercicios
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3196,7 +3199,6 @@ id edtNome
 id edtNomeUsuario
 id edtSenha
 id edtSenhaUsuario
-id edtSeries
 id elastic
 id embed
 id end
@@ -3252,6 +3254,7 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView2
 id imageView3
 id immediateStop
 id included
@@ -3483,6 +3486,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3515,7 +3519,6 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
-id videoView
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3653,7 +3656,6 @@ layout activity_listagem_professor
 layout activity_login
 layout activity_login_usuario
 layout activity_main
-layout activity_professor
 layout activity_usuario
 layout custom_dialog
 layout design_bottom_navigation_item

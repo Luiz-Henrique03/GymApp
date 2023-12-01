@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,16 +29,12 @@ public final class ActivityLoginUsuarioBinding implements ViewBinding {
   @NonNull
   public final EditText edtSenha;
 
-  @NonNull
-  public final ImageView imageView;
-
   private ActivityLoginUsuarioBinding(@NonNull LinearLayout rootView, @NonNull Button btnArrumeSe,
-      @NonNull EditText edtNome, @NonNull EditText edtSenha, @NonNull ImageView imageView) {
+      @NonNull EditText edtNome, @NonNull EditText edtSenha) {
     this.rootView = rootView;
     this.btnArrumeSe = btnArrumeSe;
     this.edtNome = edtNome;
     this.edtSenha = edtSenha;
-    this.imageView = imageView;
   }
 
   @Override
@@ -87,14 +82,8 @@ public final class ActivityLoginUsuarioBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView;
-      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
-      if (imageView == null) {
-        break missingId;
-      }
-
       return new ActivityLoginUsuarioBinding((LinearLayout) rootView, btnArrumeSe, edtNome,
-          edtSenha, imageView);
+          edtSenha);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
