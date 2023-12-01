@@ -33,5 +33,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,LoginUsuarioActivity::class.java))
         }
 
+        binding.btnSobrenos.setOnClickListener {
+            startActivity(Intent(this,SobreNosActivity::class.java))
+        }
+
     }
 }

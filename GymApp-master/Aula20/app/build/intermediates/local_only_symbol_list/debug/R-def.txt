@@ -8,10 +8,13 @@ color teal_200
 color teal_700
 color white
 drawable cariani
+drawable frango
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable images
+drawable inicial
 drawable jaofrango
+drawable loginprofessor
 drawable loginusuarioapp
 drawable logoantifrango
 drawable peso
@@ -24,6 +27,7 @@ id btnLogin
 id btnLoginUsuario
 id btnSalvar
 id btnSalvarUsuario
+id btnSobrenos
 id edtEmail
 id edtEmailUsuario
 id edtNome
@@ -38,14 +42,13 @@ id exercise5
 id exercise6
 id exercise7
 id exercise8
-id imageView
-id imageView2
 id imageView3
 id listViewExercicios
 id spinnerDiasSemana
 id spinnerProfessores
 id textView
 id tvUserName
+id videoView
 layout activity_cadastro_prof
 layout activity_cadastro_user
 layout activity_exercicios
@@ -53,6 +56,7 @@ layout activity_listagem_professor
 layout activity_login
 layout activity_login_usuario
 layout activity_main
+layout activity_sobre_nos
 layout activity_usuario
 mipmap ic_launcher
 mipmap ic_launcher_round

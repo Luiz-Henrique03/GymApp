@@ -4,21 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#000000">
+    android:background="@drawable/frango"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bem vindo professor do frango"
         android:gravity="center"
-        android:textSize="26sp"
-        android:textColor="#FFFFFF"
+        android:text="Bem vindo professor do frango"
+        android:textColor="#000000"
+        android:textSize="28sp"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edtNome"
-        android:background="#11FFFF"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:hint="Nome"
@@ -27,7 +26,6 @@
         android:textColor="#000000" />
 
     <EditText
-        android:background="#11FFFF"
         android:id="@+id/edtSenha"
         android:layout_width="match_parent"
         android:layout_height="65dp"
@@ -39,14 +37,9 @@
     <Button
         android:id="@+id/btnArrumeSe"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
         android:text="ENTRE"
-        android:textColor="#FFFFFF"
-        app:rippleColor="#9C27B0" />
+        android:textColor="#FF0000"/>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="482dp"
-        app:srcCompat="@drawable/images" />
 </LinearLayout>

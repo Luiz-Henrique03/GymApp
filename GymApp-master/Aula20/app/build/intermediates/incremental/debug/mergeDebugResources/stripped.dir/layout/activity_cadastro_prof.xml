@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#4169E1"
+    android:background="@drawable/loginprofessor"
     tools:context=".view.CadastroProfessorActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bem vindo ao app Antifrango"
         android:gravity="center"
-        android:textSize="26sp"
-        android:textColor="#FFFFFF"
+        android:text="Bem vindo ao app Antifrango"
+        android:textColor="#000000"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <EditText
@@ -29,8 +29,8 @@
         android:id="@+id/edtEmail"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:hint="Email"
         android:layout_marginVertical="20dp"
+        android:hint="Email"
         android:inputType="textPersonName" />
 
     <EditText
@@ -42,11 +42,13 @@
         android:inputType="textPersonName" />
 
 
-
     <Button
         android:id="@+id/btnSalvar"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:text="Salvar" />
+        android:backgroundTint="#000000"
+        android:text="Salvar"
+        android:textColor="#FF0000"
+        android:textSize="20sp" />
 
 </LinearLayout>

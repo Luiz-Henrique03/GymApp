@@ -2920,6 +2920,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable frango
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
@@ -2935,7 +2936,9 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable images
+drawable inicial
 drawable jaofrango
+drawable loginprofessor
 drawable loginusuarioapp
 drawable logoantifrango
 drawable m3_appbar_background
@@ -3120,6 +3123,7 @@ id btnLogin
 id btnLoginUsuario
 id btnSalvar
 id btnSalvarUsuario
+id btnSobrenos
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3254,8 +3258,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
-id imageView2
 id imageView3
 id immediateStop
 id included
@@ -3520,6 +3522,7 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
+id videoView
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3657,6 +3660,7 @@ layout activity_listagem_professor
 layout activity_login
 layout activity_login_usuario
 layout activity_main
+layout activity_sobre_nos
 layout activity_usuario
 layout custom_dialog
 layout design_bottom_navigation_item

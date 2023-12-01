@@ -2919,6 +2919,7 @@ int drawable design_ic_visibility 0x7f070084
 int drawable design_ic_visibility_off 0x7f070085
 int drawable design_password_eye 0x7f070086
 int drawable design_snackbar_background 0x7f070087
+int drawable frango 0x7f0700e9
 int drawable ic_arrow_back_black_24 0x7f070088
 int drawable ic_clear_black_24 0x7f070089
 int drawable ic_clock_black_24dp 0x7f07008a
@@ -2934,7 +2935,9 @@ int drawable ic_mtrl_chip_checked_circle 0x7f070093
 int drawable ic_mtrl_chip_close_circle 0x7f070094
 int drawable ic_search_black_24 0x7f070095
 int drawable images 0x7f070096
+int drawable inicial 0x7f0700e7
 int drawable jaofrango 0x7f070097
+int drawable loginprofessor 0x7f0700e8
 int drawable loginusuarioapp 0x7f070098
 int drawable logoantifrango 0x7f070099
 int drawable m3_appbar_background 0x7f07009a
@@ -3119,6 +3122,7 @@ int id btnLogin 0x7f080065
 int id btnLoginUsuario 0x7f080066
 int id btnSalvar 0x7f080067
 int id btnSalvarUsuario 0x7f080068
+int id btnSobrenos 0x7f08020b
 int id buttonPanel 0x7f080069
 int id cache_measures 0x7f08006a
 int id callMeasure 0x7f08006b
@@ -3253,8 +3257,6 @@ int id ifRoom 0x7f0800ec
 int id ignore 0x7f0800ed
 int id ignoreRequest 0x7f0800ee
 int id image 0x7f0800ef
-int id imageView 0x7f0800f0
-int id imageView2 0x7f0800f1
 int id imageView3 0x7f0800f2
 int id immediateStop 0x7f0800f3
 int id included 0x7f0800f4
@@ -3519,6 +3521,7 @@ int id unlabeled 0x7f0801f5
 int id up 0x7f0801f6
 int id useLogo 0x7f0801f7
 int id vertical_only 0x7f0801f8
+int id videoView 0x7f08020c
 int id view_offset_helper 0x7f0801f9
 int id view_transition 0x7f0801fa
 int id view_tree_lifecycle_owner 0x7f0801fb
@@ -3656,6 +3659,7 @@ int layout activity_listagem_professor 0x7f0b001f
 int layout activity_login 0x7f0b0020
 int layout activity_login_usuario 0x7f0b0021
 int layout activity_main 0x7f0b0022
+int layout activity_sobre_nos 0x7f0b0071
 int layout activity_usuario 0x7f0b0023
 int layout custom_dialog 0x7f0b0024
 int layout design_bottom_navigation_item 0x7f0b0025

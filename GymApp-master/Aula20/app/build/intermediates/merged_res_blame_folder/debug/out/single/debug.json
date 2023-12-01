@@ -52,8 +52,16 @@
         "source": "com.example.aula20.app-main-35:/drawable/jaofrango.png"
     },
     {
+        "merged": "com.example.aula20.app-merged_res-33:/drawable_inicial.png.flat",
+        "source": "com.example.aula20.app-main-35:/drawable/inicial.png"
+    },
+    {
         "merged": "com.example.aula20.app-merged_res-33:/layout_activity_login.xml.flat",
         "source": "com.example.aula20.app-main-35:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.aula20.app-merged_res-33:/drawable_frango.png.flat",
+        "source": "com.example.aula20.app-main-35:/drawable/frango.png"
     },
     {
         "merged": "com.example.aula20.app-merged_res-33:/xml_backup_rules.xml.flat",
@@ -70,6 +78,10 @@
     {
         "merged": "com.example.aula20.app-merged_res-33:/drawable_logoantifrango.jpeg.flat",
         "source": "com.example.aula20.app-main-35:/drawable/logoantifrango.jpeg"
+    },
+    {
+        "merged": "com.example.aula20.app-merged_res-33:/drawable_loginprofessor.png.flat",
+        "source": "com.example.aula20.app-main-35:/drawable/loginprofessor.png"
     },
     {
         "merged": "com.example.aula20.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -118,6 +130,10 @@
     {
         "merged": "com.example.aula20.app-merged_res-33:/xml_data_extraction_rules.xml.flat",
         "source": "com.example.aula20.app-main-35:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.aula20.app-merged_res-33:/layout_activity_sobre_nos.xml.flat",
+        "source": "com.example.aula20.app-main-35:/layout/activity_sobre_nos.xml"
     },
     {
         "merged": "com.example.aula20.app-merged_res-33:/drawable_images.jpeg.flat",
